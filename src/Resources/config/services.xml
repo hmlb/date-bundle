@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <parameters>
+        <parameter key="hmlb_date.converter.date.class">HMLB\DateBundle\Request\ParamConverter\DateParamConverter</parameter>
+    </parameters>
+
+    <services>
+
+        <!-- Form -->
+        <service id="hmlb_date.form.type.date" class="HMLB\DateBundle\Form\Type\DateType">
+            <tag name="form.type" alias="hmlb_date"/>
+        </service>
+
+        <service id="hmlb_date.form.type.datetime" class="HMLB\DateBundle\Form\Type\DateTimeType">
+            <tag name="form.type" alias="hmlb_datetime"/>
+        </service>
+
+        <!-- Param Converter -->
+        <service id="hmlb_date.converter.date" class="%hmlb_date.converter.date.class%">
+            <tag name="request.param_converter" converter="date"/>
+        </service>
+
+    </services>
+</container>

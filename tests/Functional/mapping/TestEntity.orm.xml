@@ -1,0 +1,16 @@
+<doctrine-mapping
+        xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+        http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity
+            name="HMLB\DateBundle\Tests\Functional\TestEntity"
+            table="hmlb_date_test">
+        <id name="id" type="integer" column="id">
+            <generator strategy="AUTO"/>
+        </id>
+        <field name="created" type="hmlb_datetime" column="created"/>
+        <field name="day" type="hmlb_date" column="day"/>
+    </entity>
+</doctrine-mapping>

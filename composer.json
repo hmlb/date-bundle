@@ -1,0 +1,65 @@
+{
+  "name": "hmlb/date-bundle",
+  "description": "Symfony2 integration of the Date library.",
+  "type": "library",
+  "keywords": [
+    "hmlb",
+    "DDD",
+    "domain driven design",
+    "command bus",
+    "php"
+  ],
+  "authors": [
+    {
+      "name": "Hugues Maignol",
+      "email": "hugues@hmlb.fr",
+      "homepage": "https://www.hmlb.fr"
+    }
+  ],
+  "homepage": "https://github.com/hmlb/date-bundle",
+  "license": "MIT",
+  "require": {
+    "php": ">=5.5.0",
+    "hmlb/date": "~1.0@dev",
+    "symfony/http-kernel": "~2.3|~3.0",
+    "symfony/dependency-injection": "~2.3|~3.0",
+    "symfony/yaml": "~2.3|~3.0",
+    "symfony/validator": "~2.3|~3.0",
+    "symfony/form": "~2.3|~3.0",
+    "symfony/options-resolver": "~2.3|~3.0",
+    "sensio/framework-extra-bundle": "~2.3|~3.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "satooshi/php-coveralls": "~0.7@dev",
+    "psr/log": "1.0.0",
+    "simple-bus/doctrine-orm-bridge": "~4.0",
+    "doctrine/orm": "~2.3",
+    "doctrine/doctrine-bundle": "~1.0",
+    "symfony/monolog-bundle": "~2.3|~3.0",
+    "symfony/var-dumper": "~2.6|~3.0",
+    "symfony/finder": "~2.3|~3.0",
+    "matthiasnoback/symfony-config-test": "~1.3",
+    "matthiasnoback/symfony-dependency-injection-test": "~0.7"
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-4": {
+      "HMLB\\DateBundle\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "HMLB\\DateBundle\\Tests\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
