@@ -61,10 +61,9 @@ class DateTypeTest extends AbstractTypeTest
 
     public function testSubmitFromSingleTextDateTimeWithDefaultFormat()
     {
-        var_dump('instanciating');
         $form = $this->factory->create(
             DateType::class,
-            null,
+            new \DateTime(),
             [
                 'model_timezone' => 'UTC',
                 'view_timezone' => 'UTC',
@@ -72,7 +71,7 @@ class DateTypeTest extends AbstractTypeTest
                 'input' => 'datetime',
             ]
         );
-        var_dump('submitting');
+        dump($form->getConfig());die;
 
         $form->submit('2010-06-02');
 
