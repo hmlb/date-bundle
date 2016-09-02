@@ -62,4 +62,9 @@ class DateType extends Type
 
         return $val;
     }
+
+    public function requiresSQLCommentHint(AbstractPlatform $platform)
+    {
+        return true;
+    }
 }
